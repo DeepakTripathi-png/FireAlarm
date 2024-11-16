@@ -51,7 +51,7 @@
                 <div class="col-md-8 col-lg-6 col-xl-4">
                     <div class="text-center">
                         <a href="">
-                            <img src="{{URL::asset('package_assets/images/construction_inventory.png')}}" alt="" height="35" class="mx-auto">
+                            <img src="{{URL::asset('package_assets/images/alarm_logo.png')}}" alt="" height="35" class="mx-auto">
                         </a>
                         <p class="text-muted mt-2 mb-2">Tor.ai</p>
                     </div>

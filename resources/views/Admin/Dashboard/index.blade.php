@@ -238,7 +238,12 @@
                 <td data-label="Device Type">Smoke Detector</td>
                 <td data-label="Location">Phursungi, Pune</td>
                 <td data-label="Date Time">12/11/2024 16:14:45</td>
-                <td data-label="Status" class="status"><span class="dot green"></span></td>
+                <td data-label="Status" class="status">
+                    <a href="javascript:;" disabled>
+                        <i class="fa fa-toggle-on tgle-on status_button" aria-hidden="true" title="Active"></i>
+                    </a>      
+                </td>
+
                 <td data-label="Action" class="action-buttons">
                     <button class="btn edit"><i class="fas fa-edit"></i></button>
                     <button class="btn delete"><i class="fas fa-trash"></i></button>
