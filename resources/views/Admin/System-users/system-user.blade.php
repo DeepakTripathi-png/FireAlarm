@@ -1,6 +1,15 @@
 @section('meta_title') System User | Fire Alarm @endsection
 @extends('Admin.Layouts.layout')
 @section('content')
+<style>
+ .card-body {
+    flex: 1 1 auto;
+    padding: 1rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+    border-radius: 0.5rem;
+    width: 100%;
+}   
+</style>    
 <div class="content-page">
     <div class="content">
         <div class="container-fluid">

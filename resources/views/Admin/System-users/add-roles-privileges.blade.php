@@ -1,13 +1,22 @@
 @section('meta_title') Add Roles & Privileges | Fire Alarm @endsection
 @extends('Admin.Layouts.layout')
 @section('content')
+<style>
+.card-body {
+    flex: 1 1 auto;
+    padding: 1rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+    border-radius: 0.5rem;
+    width: 100% !important;
+}    
+</style>
 <div class="content-page">
     <div class="content">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
                     <div class="mb-2 justify-content-between d-flex align-items-center">
-                        <h4 class="header-title ">Add New Role</h4>
+                        <h2 style="color: red">Add New Role</h2>
                         <a href="{{ url()->previous() }}" class="btn btn-secondary waves-effect waves-light add-btn"><span class="btn-label"> <i class="fas fa-long-arrow-alt-left"></i></span>Back</a>
                     </div>
                     <div class="card">

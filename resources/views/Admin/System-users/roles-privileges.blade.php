@@ -1,6 +1,7 @@
 @section('meta_title') Roles & Privileges | Fire Alarm @endsection
 @extends('Admin.Layouts.layout')
 @section('content')
+    
 <div class="content-page">
     <div class="content">
         <div class="container-fluid">

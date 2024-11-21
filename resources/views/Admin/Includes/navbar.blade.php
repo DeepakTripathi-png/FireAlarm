@@ -287,12 +287,43 @@ $RolesPrivileges = App\Models\Master\Role_privilege::where('status', 'active')->
                 </li>
                 @endif --}}
                 @if(!empty($RolesPrivileges) && str_contains($RolesPrivileges, 'role_privileges_view'))
-                <li class="role-privileges">
+
+                <!-- <li class="role-privileges">
                     <a href="{{ url('/admin/roles-privileges') }}">
                         <i class="mdi mdi-account"></i>
                         <span> Role Management </span>
                     </a>
+                </li> -->
+
+
+
+                <li class="setting">
+                    <a href="#role_management" data-bs-toggle="collapse">
+                        <i class="mdi mdi-laptop"></i>
+                        <span> Role Management </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <div class="collapse" id="role_management">
+                        <ul class="nav-second-level">
+                            @if(!empty($RolesPrivileges) && str_contains($RolesPrivileges, 'import_deice_view'))
+                            <li class="general-setting">
+                                <a href="{{ url('/admin/roles-privileges') }}">
+                                    <span>Role</span>
+                                </a>
+                            </li>
+                            @endif
+                            @if(!empty($RolesPrivileges) && str_contains($RolesPrivileges, 'map_device_customer_view'))
+                            <li class="visual-setting">
+                                <a href="{{ url('admin/system-user') }}">
+                                    <span>System User</span>
+                                </a>
+                            </li>
+                            @endif
+                            
+                        </ul>
+                    </div>
                 </li>
+
                 @endif
 
 
@@ -317,13 +348,13 @@ $RolesPrivileges = App\Models\Master\Role_privilege::where('status', 'active')->
                             </a>
                             <div class="collapse" id="setting">
                                 <ul class="nav-second-level">
-                                    @if(!empty($RolesPrivileges) && str_contains($RolesPrivileges, 'import_deice_view'))
+                                    <!-- @if(!empty($RolesPrivileges) && str_contains($RolesPrivileges, 'import_deice_view'))
                                     <li class="general-setting">
                                         <a href="{{ url('/admin/device-import') }}">
                                             <span> Import Device</span>
                                         </a>
                                     </li>
-                                    @endif
+                                    @endif -->
                                     @if(!empty($RolesPrivileges) && str_contains($RolesPrivileges, 'map_device_customer_view'))
                                     <li class="visual-setting">
                                         <a href="{{ url('/admin/map-device') }}">
@@ -345,7 +376,7 @@ $RolesPrivileges = App\Models\Master\Role_privilege::where('status', 'active')->
 
 
 
-                @if(!empty($RolesPrivileges) && str_contains($RolesPrivileges, 'add_customer'))
+                <!-- @if(!empty($RolesPrivileges) && str_contains($RolesPrivileges, 'add_customer'))
                 <li class="Customer">
                     <a href="{{ url('admin/customer') }}">
                         <i class="mdi mdi-human-child"></i>
@@ -353,7 +384,7 @@ $RolesPrivileges = App\Models\Master\Role_privilege::where('status', 'active')->
                         <span>Add Customer</span>
                     </a>
                 </li>
-                @endif
+                @endif -->
 
 
                 @if(!empty($RolesPrivileges) && str_contains($RolesPrivileges, 'alarm_management'))

@@ -62,6 +62,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['prevent-back-history', 'is_
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     Route::view('/device-import', 'admin.Device.import_device');
+    
     Route::view('/map-device', 'admin.Device.map_device_to_customer');
     Route::view('/my_device', 'admin.Device.my_device');
   
@@ -93,7 +94,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['prevent-back-history', 'is_
         Route::get('roles-privileges/check-role-exist','check_role_exist');
     });
 
-    Route::controller(SystemUserController::class)->group(function () {
+    Route::controller(SystemUserController::class)->group(function (){
         Route::get('system-user','index');
         Route::get('system-user/add','create');
         Route::post('system-user/store','store')->name('system-user.store');
@@ -119,6 +120,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['prevent-back-history', 'is_
 });
 //End Backend Routes
 
-Route::fallback(function () {
-    return redirect('admin/404');
-});
+// Route::fallback(function () {
+//     return redirect('admin/404');
+// });
